@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Crimes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Monitoramento de Crimes</h1>
+        
+        <h2>Inserir Dados</h2>
+        <form id="insertForm">
+            <input type="text" id="nome" placeholder="Nome do local" required>
+            <input type="text" id="bairro" placeholder="Bairro" required>
+            <input type="text" id="regiao" placeholder="Região" required>
+            <textarea id="incidencias" placeholder="Incidências (formato: roubo:10, furto:5, assalto:2)" required></textarea>
+            <button type="submit">Inserir</button>
+        </form>
+        
+        <h2>Dados de Crimes</h2>
+        <button id="fetchData">Carregar Dados</button>
+        <div id="dataContainer"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
